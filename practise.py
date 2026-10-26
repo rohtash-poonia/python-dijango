@@ -116,3 +116,82 @@ print(6 | 3)
 # Operator Precedence
 print(100 + 5 * 3) #115
 
+
+
+# list in pyton like array in javascript
+# first prctise
+list1 = ["apple", "banana", "cherry"]
+list2 = [1, 5, 7, 9, 3]
+list3 = [True, False, False]
+print(list1)
+print(list2)
+print(list3)
+print(list1[0]) #apple
+print(list1[1]) #banana
+print(list1[2]) #cherry
+print (len(list1)) #3
+
+# second question
+thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+print(thislist) #['apple', 'banana', 'cherry']
+# agar aapne list(("e",2)) to ye ek array or list bana ke dega
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5]) #['cherry', 'orange', 'kiwi']
+print(thislist[:4]) #['apple', 'banana', 'cherry', 'orange']
+print(thislist[2:]) #['cherry', 'orange', 'kiwi',
+# 2 to 5 index print kar dega and 4 index se pehle ke index print kar dega and 2 index se aage ke index print kar dega
+
+#third quesstion to change the list items
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist) #['apple', 'blackcurrant', 'cherry']
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+
+thislist[1:3] = ["blackcurrant", "watermelon"]
+
+print(thislist) #['apple', 'blackcurrant', 'watermelon', 'orange', 'kiwi', 'mango'] esmai 1 se 3 index ke beech ke items ko replace kar diya hai
+
+
+
+# Add list items
+
+# first question
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist) #['apple', 'banana', 'watermelon', 'cherry'] 2 index pe watermelon add kar diya hai
+# insert list mai insert karne ke liye use hota hai
+
+# second question
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist) #['apple', 'banana', 'cherry', 'orange'] append list mai add karne ke liye use hota hai 
+
+# third question
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist) #['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya'] extend list mai add karne ke liye use hota hai
+
+#remove list items
+thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
+thislist.remove("banana")
+print(thislist) #['apple', 'cherry', 'banana', 'kiwi'] remove list mai remove karne ke liye use hota hai
+
+# second question
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist) #['apple', 'cherry'] pop list mai remove karne ke liye use hota hai pop mai index number dena padta hai aur wo index number ke item ko remove kar deta hai agr index number nahi diya to last item ko remove kar deta hai
+
+
+# third question
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist) #[] clear list mai remove karne ke liye use hota hai clear list ko empty kar deta hai
+
+
+# loop lists
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+  print(x) #apple banana cherry 

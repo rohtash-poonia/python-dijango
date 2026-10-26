@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third-party packages
     "rest_framework",      # Enables Django REST Framework
-    "corsheaders",         # Enables Cross-Origin Resource Sharing
+    "corsheaders",   
+          
+    "tasks"      # Enables Cross-Origin Resource Sharing
 ]
 
 MIDDLEWARE = [
