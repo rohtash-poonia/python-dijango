@@ -33,3 +33,86 @@ print(bool(myobj)) #false
 #forth question
 x = 200
 print(isinstance(x, int)) #True
+
+# artematic oprators
+x = 15
+y = 4
+
+print(x + y)
+print(x - y)
+print(x * y)
+print(x / y)
+print(x % y)
+print(x ** y) # 4 ki power 15 means 4*4 15 times
+print(x // y)  # remove the point deciaml value
+
+# Assignment Operators
+x = 10
+x += 5  
+print(x) 
+#output will be 15
+
+#terniary operator
+num = 6
+
+x = "WEEKEND!" if num > 5 else "Workday"
+
+print(x)
+
+# comparison operator
+x = 5
+y = 3
+
+print(x == y)
+print(x != y)
+print(x > y)
+print(x < y)
+print(x >= y)
+print(x <= y)
+
+# logical operator
+
+# first question
+x = 5
+print(not(x > 3 and x < 10))
+
+# second question
+x = 5
+print(x < 5 or x > 10)
+
+# identity operator
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+
+print(x is z)
+print(x is y)
+print(x == y)
+
+# membership operators
+fruits = ["apple", "banana", "cherry"]
+
+print("banana" in fruits)
+
+fruits = ["apple", "banana", "cherry"]
+
+print("pineapple" not in fruits)
+
+
+
+# bitwise operators
+# The & operator compares each bit and set it to 1 if both are 1, otherwise it is set to 0
+# 6 = 0110
+# 3 = 0011
+# --------
+# 2 = 0010
+
+
+# & for both true 
+# | for only one true
+print(6 & 3)
+print(6 | 3)
+
+# Operator Precedence
+print(100 + 5 * 3) #115
+
