@@ -195,3 +195,95 @@ print(thislist) #[] clear list mai remove karne ke liye use hota hai clear list 
 thislist = ["apple", "banana", "cherry"]
 for x in thislist:
   print(x) #apple banana cherry 
+
+# second question
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1 #output will be apple banana cherry because while loop mai i ko 0 se start kar ke len(thislist) tak loop chala ke print kar diya hai
+
+
+  # list comparison
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+print(newlist) #['apple', 'banana', 'mango'] esmai  fruits list mai se a wale items ko newlist mai add kar diya hai
+
+# second question
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x.upper() for x in fruits]
+print(newlist) #['APPLE', 'BANANA', 'CHERRY', 'KIWI', 'MANGO'] esmai  fruits list mai se saare items ko uppercase mein convert kar ke newlist mai add kar diya hai
+
+# third question
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = ['hello' for x in fruits]
+print(newlist) #['hello', 'hello', 'hello', 'hello', 'hello'] esmai  fruits list mai se saare items ko hello mein convert kar ke newlist mai add kar diya hai kyunki humne x ko use nahi kiya hai to saare items ko hello mein convert kar diya hai
+
+
+# sort list
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist) #['banana', 'kiwi', 'mango', 'orange', 'pineapple'] esmai  fruits list mai se saare items ko sort kar ke newlist mai add kar diya hai alphabetical order mein
+
+# second question
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist) #['pineapple', 'orange', 'mango', 'kiwi', 'banana'] esmai  fruits list mai se saare items ko sort kar ke newlist mai add kar diya hai reverse order mein
+
+# third question
+thislist = [100, 50, 65, 82, 23]
+def myfunc(n):
+  return abs(n - 50)
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist) #[50, 65, 23, 82, 100] kyoki abs positive mai convert kar raha hai and n-50 ka difference nikal raha hai and uske according sort kar raha hai
+
+# forth question
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key = str.lower)
+print(thislist) #['banana', 'cherry', 'Kiwi', 'Orange'] esmai  fruits list mai se saare items ko sort kar ke newlist mai add kar diya hai alphabetical order mein but case insensitive
+
+# copy list
+# first question
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+mylist.append("mango")
+print(mylist)
+print(thislist) #['apple', 'banana', 'cherry', 'mango'] ['apple', 'banana', 'cherry'] esmai  fruits list mai se saare items ko copy kar ke newlist mai add kar diya hai and mylist mai mango add kar diya hai but thislist mai nahi add hua hai
+
+# second question
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist) #['apple', 'banana', 'cherry'] esmai  fruits list mai se saare items ko copy kar ke newlist mai add kar diya hai list mehod
+
+# third question
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist[:]
+print(mylist) #['apple', 'banana', 'cherry'] esmai  fruits list mai se saare items ko copy kar ke newlist mai add kar diya hai slicing method
+
+# join lists
+# first question
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3) #['a', 'b', 'c', 1, 2, 3] esmai  list1 and list2 ko join kar ke newlist mai add kar diya hai
+
+# second question
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+for x in list2:
+  list1.append(x)
+
+print(list1) #['a', 'b', 'c', 1, 2, 3] esmai  list1 and list2 ko join kar ke newlist mai add kar diya hai append method se
+
+# third question
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+list1.extend(list2)
+print(list1) #['a', 'b', 'c', 1, 2, 3] esmai  list1 and list2 ko join kar ke newlist mai add kar diya hai extend method se
